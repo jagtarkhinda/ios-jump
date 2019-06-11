@@ -30,9 +30,9 @@ class GameScene: SKScene {
         
         // 1. make sk action
             // move left action
-            let m1  = SKAction.moveBy(x: -300, y: 0, duration: 2)
+            let m1  = SKAction.moveBy(x: -500, y: 0, duration: 2)
             //move right action
-            let m2  = SKAction.moveBy(x: 300, y: 0, duration: 2)
+            let m2  = SKAction.moveBy(x: 500, y: 0, duration: 2)
         // 2. put actions into a sequence
             let seq = SKAction.sequence([m1,m2])
         //3. apply sequence to sprite (run forever
@@ -53,6 +53,7 @@ class GameScene: SKScene {
         
         //apply the run action on robot
         self.robot!.run(jumpAction)
+        
     }
     
   
