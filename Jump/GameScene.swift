@@ -27,6 +27,12 @@ class GameScene: SKScene {
     
     //function to detect touches
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        print("screen touch")
+        
+        //to apply the impulse (force) we need a physics definition body (two ways either by code or by changing properties
+        //read slides (spritekit + physics)
+        //apply physics definition to the robot and ground(uncheck all options) by properties
+        
+        
+        
     }
 }
