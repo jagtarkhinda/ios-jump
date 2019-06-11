@@ -23,6 +23,22 @@ class GameScene: SKScene {
         self.robot = self.childNode(withName: "robot")
         self.poop = self.childNode(withName: "poop")
         self.ground = self.childNode(withName: "ground")
+        
+        
+        
+          //make the poop move back and forth forever
+        
+        // 1. make sk action
+            // move left action
+            let m1  = SKAction.moveBy(x: -300, y: 0, duration: 2)
+            //move right action
+            let m2  = SKAction.moveBy(x: 300, y: 0, duration: 2)
+        // 2. put actions into a sequence
+            let seq = SKAction.sequence([m1,m2])
+        //3. apply sequence to sprite (run forever
+        self.poop!.run(SKAction.repeatForever(seq))
+        
+        
 }
     
     //function to detect touches
@@ -37,8 +53,9 @@ class GameScene: SKScene {
         
         //apply the run action on robot
         self.robot!.run(jumpAction)
-        
-        
-        
     }
+    
+  
+    
+    
 }
