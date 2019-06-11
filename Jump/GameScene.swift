@@ -24,4 +24,9 @@ class GameScene: SKScene {
         self.poop = self.childNode(withName: "poop")
         self.ground = self.childNode(withName: "ground")
 }
+    
+    //function to detect touches
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        print("screen touch")
+    }
 }
