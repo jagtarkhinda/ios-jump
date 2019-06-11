@@ -32,6 +32,12 @@ class GameScene: SKScene {
         //read slides (spritekit + physics)
         //apply physics definition to the robot and ground(uncheck all options) by properties
         
+        //this action takes x and y values (adjust according to the sprite size) and duraiton
+        let jumpAction = SKAction.applyImpulse(CGVector(dx:0,dy: 5000), duration: 0.5)
+        
+        //apply the run action on robot
+        self.robot!.run(jumpAction)
+        
         
         
     }
